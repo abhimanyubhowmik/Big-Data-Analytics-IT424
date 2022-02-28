@@ -9,6 +9,8 @@
 
 ------------------------------------------------------------------------------------------------------
 
+## Course Contents/Syllabus:
+
 #### Module I Overview of Data Mining
 
 Classification Techniques, K-means Clustering, Association rules, Decision Trees, Linear and Logistic Regression
@@ -32,7 +34,7 @@ Applications and case studies- Banking and Securities, Communications, Media and
 #### Module VI Case Studies
 Insufficient understanding and acceptance of big data, Complexity of managing data quality, Dangerous big data security holes, Tricky process of converting big data into valuable insights, Troubles of up scaling.
 
-### List of Experiments of Big Data Analytics using Hadoop and R
+## List of Experiments of Big Data Analytics using Hadoop and R
 
 1. Write an R-program to solve roots of the quadratic equation
 2. Write an R-Program to find factorial and palindrome of given number.
