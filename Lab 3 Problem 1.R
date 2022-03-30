@@ -1,37 +1,39 @@
-# Problem 1:
+# Question 1: WAP in R Language to generate Fibonacci series up-to n.
 
-# Quadratic Equation of One Variable.
-
-a = readline()
-b = readline()
-c = readline()
-
-a = as.integer(a)
-b = as.integer(b)
-c = as.integer(c)
-
-x = seq.int(-10,10,.5)
-y = a*x^2 + b*x + c 
-
-plot(x,y)
-abline(0,0)
-
-D = b^2 - 4*a*c
-
-if(D > 0){
-  x1 = (-b + sqrt(D)) / (2*a)
-  x2 = (-b - sqrt(D)) / (2*a)
-  sprintf('Roots of the Qudratic Equation: %s , %s', x1, x2)
-}else if(D == 0){
-  X = (-b + sqrt(D)) / (2*a)
-  sprintf('Root of the Qudratic Equation: %s ', X)
-}else{
-  print('Qudratic Equation has imaginary root')
+# Fibonacci Series up-to n
+fibo <- function(n){
+  a = 0
+  b = 1
+  c = 0
+  out = c(a,b)
+  if(n<= 0){
+    return(a)
+  }else if(n == 1){
+    return(out)
+  }else{
+    while(c < n){
+      c = a + b
+      a = b
+      b = c
+      if (c <= n){
+        out = c(out,c) 
+      }
+    }
+    return(out)
+  }
 }
 
+# Checking of Fibonacci Series
+fibo(8)
+fibo(88)
+fibo(833)
 
+# Generation of Sequence of Number for Plotting Graph of Fibonacci Number
+x = seq.int(0,50,1)
+y = c()
+for(i in x){
+  y = c(y,length(fibo(i)))
+}
 
-
-
-
-
+# Plotting of Graph
+plot(x,y,xlab = 'Number(n)',ylab = 'Count of Fibonacci Number under Number(n)')
